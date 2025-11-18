@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Sensory';
+    src: url('./fonts/SENSORYSansVF.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sensory', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#permission-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#permission-overlay.hidden {
+    display: none;
+}
+
+#permission-box {
+    text-align: center;
+    padding: 20px;
+}
+
+#permission-box p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#grant-permission {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+#main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#text-input {
+    width: 100%;
+    height: 100%;
+    font-family: 'Sensory', sans-serif;
+    font-size: 38px;
+    border: none;
+    outline: none;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+#text-input:empty:before {
+    content: attr(data-placeholder);
+    color: #ccc;
+}
+
+#text-input span {
+    font-family: 'Sensory', sans-serif;
+}
+
+#debug-info {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: gray;
+    z-index: 100;
+}
